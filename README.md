@@ -256,9 +256,6 @@ publicação:
     ## 10.1109/MCOM.2018.1700960 (URL:
     ## https://doi.org/10.1109/MCOM.2018.1700960).
     ## 
-    ## To see these entries in BibTeX format, use 'print(<citation>,
-    ## bibtex=TRUE)', 'toBibtex(.)', or set
-    ## 'options(citation.bibtex.max=999)'.
 
     citation("GA")
 
@@ -273,9 +270,6 @@ publicação:
     ##   optimisation, parallelisation and islands evolution. The R Journal,
     ##   9/1, 187-206. https://journal.r-project.org/archive/2017/RJ-2017-008
     ## 
-    ## To see these entries in BibTeX format, use 'print(<citation>,
-    ## bibtex=TRUE)', 'toBibtex(.)', or set
-    ## 'options(citation.bibtex.max=999)'.
 
 Obs.:
 -----
