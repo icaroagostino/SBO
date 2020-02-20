@@ -28,7 +28,7 @@ possui 5 etapas: punching, bending, welding, power pressing e drilling.
 Cada etapa possui um número diferente de máquinas paralelas e idênticas.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/fs.png" width="600" align="center">
+<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/flows.png" width="600" align="center">
 </p>
 
 No `R` é preciso instalar as bibliotecas necessárias utilizando a função
