@@ -93,7 +93,7 @@ plotagem de estatísticas e trajetórias.
 
     plot(get_mon_resources(envs))
 
-<img src="report_SBO_R_files/figure-markdown_strict/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/utilization1.png)
 
 Como podemos ver, nossa solução inicial arbitrária com 2 máquinas
 paralelas em cada etapa não é adequada para a demanda atual, formando
@@ -184,7 +184,7 @@ maximizando a utilização dos recursos.
 
     plot(GA)
 
-<img src="report_SBO_R_files/figure-markdown_strict/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/GA.png)
 
 A solução que maximiza a utilização dos recursos é: \[2, 4, 3, 2, 1\]
 representando o número de máquinas paralelas em cada etapa
@@ -205,7 +205,7 @@ cenário simulado.
 
     plot(get_mon_resources(envs))
 
-<img src="report_SBO_R_files/figure-markdown_strict/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
+![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/utilization2.png)
 
 Como podemos ver a solução encontrada pela Otimização baseada em
 Simulação foi capaz de maximizar a utilização média dos recursos, se
