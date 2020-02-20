@@ -9,7 +9,7 @@ Otimização seja testado em um ambiente simulado que representa um
 possível estado do sistema.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/SBO.PNG" width="600" align="center">
+<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/SBO.PNG" width="600">
 </p>
 
 ### Criando um ambiente de Simulação com `Simmer`
@@ -28,7 +28,7 @@ possui 5 etapas: punching, bending, welding, power pressing e drilling.
 Cada etapa possui um número diferente de máquinas paralelas e idênticas.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/flows.png" width="600" align="center">
+<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/flows.png" width="600">
 </p>
 
 No `R` é preciso instalar as bibliotecas necessárias utilizando a função
@@ -97,7 +97,9 @@ plotagem de estatísticas e trajetórias.
 
     plot(get_mon_resources(envs))
 
-![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/utilization1.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/utilization1.png">
+</p>
 
 Como podemos ver, nossa solução inicial arbitrária com 2 máquinas
 paralelas em cada etapa não é adequada para a demanda atual, formando
