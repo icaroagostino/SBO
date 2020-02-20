@@ -27,7 +27,9 @@ Shop híbrido para produção de peças metálicas. O processo de produção
 possui 5 etapas: punching, bending, welding, power pressing e drilling.
 Cada etapa possui um número diferente de máquinas paralelas e idênticas.
 
-![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/flowshop.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/fs.png" width="600" align="center">
+</p>
 
 No `R` é preciso instalar as bibliotecas necessárias utilizando a função
 `install.packages(c("simmer", "simmer.plot", "GA"))`. Após isso vamos
