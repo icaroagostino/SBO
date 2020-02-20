@@ -8,7 +8,7 @@ serão integrados de forma que cada conjunto de soluções gerados pela
 Otimização seja testado em um ambiente simulado que representa um
 possível estado do sistema.
 
-![SBO](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/SBO.PNG)
+![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/SBO.PNG)
 
 ### Criando um ambiente de Simulação com `Simmer`
 
@@ -24,6 +24,8 @@ relatado por [Marichelvam, Prabaharan e Yang
 Shop híbrido para produção de peças metálicas. O processo de produção
 possui 5 etapas: punching, bending, welding, power pressing e drilling.
 Cada etapa possui um número diferente de máquinas paralelas e idênticas.
+
+![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/flowshop.png)
 
 No `R` é preciso instalar as bibliotecas necessárias utilizando a função
 `install.packages(c("simmer", "simmer.plot", "GA"))`. Após isso vamos
@@ -96,7 +98,7 @@ plotagem de estatísticas e trajetórias.
 Como podemos ver, nossa solução inicial arbitrária com 2 máquinas
 paralelas em cada etapa não é adequada para a demanda atual, formando
 fila excessiva na etapa Bending e subutilizando as demais etapas. A
-utilização média dos recursos para esse cenário foi de **72.91%**.
+utilização média dos recursos para esse cenário foi de **72.71%**.
 
 ### Utilizando algoritimo genético com o pacote `GA`
 
@@ -209,7 +211,7 @@ Como podemos ver a solução encontrada pela Otimização baseada em
 Simulação foi capaz de maximizar a utilização média dos recursos, se
 apresentando como uma solução robusta capaz de lidar com a
 estocasticidade do sistema. A utilização média dos recursos nesse novo
-cenário foi de **96.57%**.
+cenário foi de **98.73%**.
 
 O exemplo ilustrado demonstra a facilidade de integração de simulação e
 otimização utilizando `R`, podendo se estender a cenários mais
@@ -264,3 +266,13 @@ publicação:
     ## To see these entries in BibTeX format, use 'print(<citation>,
     ## bibtex=TRUE)', 'toBibtex(.)', or set
     ## 'options(citation.bibtex.max=999)'.
+
+Obs.:
+-----
+
+Os dados utilizados nesse exemplo são públicos e podem ser encontrado
+em:
+[github.com/icaroagostino/SBO](https://github.com/icaroagostino/SBO).
+
+contato:
+<a href="mailto:icaroagostino@gmail.com" class="email">icaroagostino@gmail.com</a>
