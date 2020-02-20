@@ -8,7 +8,7 @@ serão integrados de forma que cada conjunto de soluções gerados pela
 Otimização seja testado em um ambiente simulado que representa um
 possível estado do sistema.
 
-![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/SBO.PNG)
+![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/SBO.PNG){width=50%}
 
 ### Criando um ambiente de Simulação com `Simmer`
 
