@@ -190,7 +190,9 @@ maximizando a utilização dos recursos.
 
     plot(GA)
 
-![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/GA.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/GA.png">
+</p>
 
 A solução que maximiza a utilização dos recursos é: \[2, 4, 3, 2, 1\]
 representando o número de máquinas paralelas em cada etapa
@@ -211,7 +213,9 @@ cenário simulado.
 
     plot(get_mon_resources(envs))
 
-![](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/utilization2.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/utilization2.png">
+</p>
 
 Como podemos ver a solução encontrada pela Otimização baseada em
 Simulação foi capaz de maximizar a utilização média dos recursos, se
