@@ -1,3 +1,6 @@
+# **Otimização baseada em Simulação**
+Ícaro Agostino, 19/02/2020
+
 Neste reporte é demonstrado a implementação da abordagem **Otimização
 baseado em Simulação**, e realizado uma aplicação para balanceamento de
 Flow Shop híbrido. Serão utilizados os pacotes `Simmer` e `GA`, ambos
