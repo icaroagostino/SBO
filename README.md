@@ -5,6 +5,8 @@ serão integrados de forma que cada conjunto de soluções gerados pela
 Otimização seja testado em um ambiente simulado que representa um
 possível estado do sistema.
 
+![SBO](https://raw.githubusercontent.com/icaroagostino/SBO/master/img/SBO.PNG)
+
 ### Criando um ambiente de Simulação com `Simmer`
 
 O pacote `Simmer` implementado em `R` fornece um framework para
