@@ -34,7 +34,7 @@ Cada etapa possui um número diferente de máquinas paralelas e idênticas.
 No `R` é preciso instalar as bibliotecas necessárias utilizando a função
 `install.packages(c("simmer", "simmer.plot", "GA"))`. Após isso vamos
 carregar as bibliotecas e criar o ambiente de simulação.
-```s
+```r
     # carregando os pacotes
     library(simmer)
     library(simmer.plot)
