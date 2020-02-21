@@ -34,7 +34,7 @@ Cada etapa possui um número diferente de máquinas paralelas e idênticas.
 No `R` é preciso instalar as bibliotecas necessárias utilizando a função
 `install.packages(c("simmer", "simmer.plot", "GA"))`. Após isso vamos
 carregar as bibliotecas e criar o ambiente de simulação.
-```s
+```r
     # carregando os pacotes
     library(simmer)
     library(simmer.plot)
@@ -71,7 +71,7 @@ Flow Shop o processo segue um fluxo linear, dessa forma a trajetória
 construída foi adicionada ao ambiente de simulação. Agora vamos
 adicionar os recursos que serão o número de máquinas paralelas em cada
 etapa.
-
+```r
     env %>%
         add_resource("Punching", 2) %>%
         add_resource("Bending",  2) %>%
@@ -79,24 +79,24 @@ etapa.
         add_resource("Pressing", 2) %>%
         add_resource("Drilling", 2) %>%
         add_generator("flowShop", flowShop, function() rnorm(1, 5, 1))
-
+```
 Como solução inicial duas máquinas paralelas foram adicionadas em cada
 etapa. Além disso, foi adicionado uma demanda estocástica com intervalo
 de 5 minutos seguindo uma distribuição normal para cada ordem de
 produção. Agora vamos simular 30 vezes esse cenário durante um dia (2
 turnos totalizando 960 minutos) e calcular a utilização média dos
 recursos.
-
+```r
     envs <- lapply(1:30, function(i) {
         run(env,960) # Simula um dia (2 turnos)
       })
-
+```
 Agora vamos calcular a utilização média dos recursos, para isso vamos
 utilizar o pacote `Simmer.plot` que é uma extensão do `Simmer` para
 plotagem de estatísticas e trajetórias.
-
+```r
     plot(get_mon_resources(envs))
-
+```
 <p align="center">
 <img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/utilization1.png">
 </p>
@@ -117,17 +117,17 @@ Para solucionar esse problema de balanceamento vamos utilizar Otimização
 baseada em Simulação, integrando algoritimo genético ao ambiente de
 simulação implementado. Vamos carregar o pacote `GA` e integrar a
 simulação.
-
+```r
     # carregando pacote
     library(GA)
-
+```
 O pacote utiliza a função `ga` para buscar uma solução otimizada, para
 isso precisamos passar para o algoritmo uma função objetivo, podendo ser
 qualquer função definida em `R`, assim como as restrições e parâmetros
 da otimização. Agora vamos encapsular a simulação criada em uma função
 que recebe como argumento o número de máquinas paralelas em cada etapa e
 no fim retorna a utilização média dos recursos.
-
+```r
     # Criando uma funcao para simular o cenario
     simular <- function(Punching, Bending, Welding, Pressing, Drilling){
       # Criando ambiente de simulacao
@@ -152,7 +152,7 @@ no fim retorna a utilização média dos recursos.
       # Retorna a utilização média dos recursos
       return(util[[2]] %>% mean)
     }
-
+```
 Após o encapsulamento do cenário de simulação como uma função basta
 parametrizar o algoritimo genético e executar a otimização. Aqui vamos
 assumir os seguintes parâmetros arbitrários:
@@ -173,7 +173,7 @@ geração teremos 10 soluções possíveis, os melhores indivíduos de cada
 iteração sofrerão crossover e mutação gerando uma nova geração de
 soluções. Ao fim de 20 iteração a melhor solução será retornada
 maximizando a utilização dos recursos.
-
+```r
     GA <- ga(type = "real-valued",
              fitness = function(x) simular(x[1],x[2],x[3],x[4],x[5]),
              lower = c(1,1,1,1,1),
@@ -189,7 +189,7 @@ maximizando a utilização dos recursos.
     ## [1,]  2  4  3  2  1
 
     plot(GA)
-
+```
 <p align="center">
 <img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/GA.png">
 </p>
@@ -198,7 +198,7 @@ A solução que maximiza a utilização dos recursos é: \[2, 4, 3, 2, 1\]
 representando o número de máquinas paralelas em cada etapa
 respectivamente. Agora vamos analisar a qualidade dessa solução no
 cenário simulado.
-
+```r
     env <- simmer("model")
 
     env %>%
@@ -212,7 +212,7 @@ cenário simulado.
     envs <- reset(env) ; run(env,960) # Simula um dia (2 turnos)
 
     plot(get_mon_resources(envs))
-
+```
 <p align="center">
 <img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/utilization2.png">
 </p>
@@ -238,7 +238,7 @@ ferramentas.**
 
 Se usar algum dos pacotes aqui demonstrados não esqueça de citar a
 publicação:
-
+```r
     citation("simmer")
 
     ## 
@@ -270,7 +270,7 @@ publicação:
     ##   optimisation, parallelisation and islands evolution. The R Journal,
     ##   9/1, 187-206. https://journal.r-project.org/archive/2017/RJ-2017-008
     ## 
-
+```
 Obs.:
 -----
 
