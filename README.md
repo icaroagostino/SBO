@@ -9,7 +9,7 @@ Otimização seja testado em um ambiente simulado que representa um
 possível estado do sistema.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/SBO_.PNG" width="600">
+<img src="https://raw.githubusercontent.com/icaroagostino/SBO/master/img/SBO-.PNG" width="600">
 </p>
 
 ### Criando um ambiente de Simulação com `Simmer`
