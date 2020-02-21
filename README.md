@@ -1,4 +1,4 @@
-# **Otimização baseada em Simulação em R**
+# **Otimização baseada em Simulação em `R`**
 Ícaro Agostino, 19/02/2020
 
 Neste reporte é demonstrado a implementação da abordagem **Otimização
