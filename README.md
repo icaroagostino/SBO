@@ -34,7 +34,7 @@ Cada etapa possui um número diferente de máquinas paralelas e idênticas.
 No `R` é preciso instalar as bibliotecas necessárias utilizando a função
 `install.packages(c("simmer", "simmer.plot", "GA"))`. Após isso vamos
 carregar as bibliotecas e criar o ambiente de simulação.
-
+```s
     # carregando os pacotes
     library(simmer)
     library(simmer.plot)
@@ -64,7 +64,7 @@ carregar as bibliotecas e criar o ambiente de simulação.
         timeout(function() rnorm(1, 6)) %>%
         release("Drilling", 1)
       # Adcionando recursos
-
+```
 Os tempos atribuídos aos processos são arbitrários, para adicionar
 estocasticidade vamos utilizar a distribuição normal. No ambiente de
 Flow Shop o processo segue um fluxo linear, dessa forma a trajetória
