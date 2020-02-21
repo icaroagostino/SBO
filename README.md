@@ -239,7 +239,7 @@ ferramentas.**
 Se usar algum dos pacotes aqui demonstrados não esqueça de citar a
 publicação:
 ```r
-    citation("simmer")
+citation("simmer")
 
     ## 
     ## To cite 'simmer' in publications use:
