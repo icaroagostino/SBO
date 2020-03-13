@@ -225,7 +225,7 @@ cenário foi de **98.73%**.
 
 O exemplo ilustrado demonstra a facilidade de integração de simulação e
 otimização utilizando `R`, podendo se estender a cenários mais
-complexas, desde que tenhamos váriaveis de decisão e um KPI da simulação
+complexos, desde que tenhamos váriaveis de decisão e um KPI da simulação
 a ser máximizado ou mínimizado.
 
 ### Outlook
