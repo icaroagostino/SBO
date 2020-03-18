@@ -69,7 +69,7 @@ library(parallel)
 
 popSize <- 30         # Tamanho da população
 maxiter <- 500        # Max de iteração
-run <- 30             # Numero de iterações iguais que para otimização
+run <- 10             # Numero de iterações iguais que para otimização
 pcrossover <- 0.8     # Crossover
 pmutation <- 0.1      # Mutação
 parallel <- TRUE      # Parelizando a avalição dos individuos
