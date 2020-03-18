@@ -1,4 +1,5 @@
 library(simmer)
+library(simmer.plot)
 
 set.seed(123)
 n_run <- 30   # Números de replicação para cada simulação
@@ -32,11 +33,11 @@ simular <- function(Punching,
     seize("Welding", 1) %>%
     timeout(function() rnorm(1, 15)) %>%
     release("Welding", 1) %>%
-  ## add a Pressing activity
+    ## add a Pressing activity
     seize("Pressing", 1) %>%
     timeout(function() rnorm(1, 12)) %>%
     release("Pressing", 1) %>%
-  ## add a Drilling activity
+    ## add a Drilling activity
     seize("Drilling", 1) %>%
     timeout(function() rnorm(1, 6)) %>%
     release("Drilling", 1)
@@ -49,7 +50,7 @@ simular <- function(Punching,
     add_resource("Drilling", Drilling) %>%
     add_generator("flowShop", flowShop, function() rexp(1, 1/5))
   # Run com replicacoes
-  envs <- lapply(1:n_run, function(i) {
+  envs <<- lapply(1:n_run, function(i) {
     reset(env) ; run(env, sim_t) # Simula tempo definido em sim_t
   })
   # Calculando a utilizacao media dos recursos
@@ -66,7 +67,7 @@ simular <- function(Punching,
 library(GA)
 library(parallel)
 
-popSize <- 100        # Tamanho da população
+popSize <- 30         # Tamanho da população
 maxiter <- 500        # Max de iteração
 run <- 30             # Numero de iterações iguais que para otimização
 pcrossover <- 0.8     # Crossover
@@ -94,3 +95,4 @@ plot(GA) # Plota busca
 
 # Simula melhor solucao
 do.call(simular, as.list(solution))
+plot(get_mon_resources(envs)) # Plota resultados
