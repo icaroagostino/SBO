@@ -1,5 +1,6 @@
 library(simmer)
 
+set.seed(123)
 n_run <- 30   # Números de replicação para cada simulação
 sim_t <- 7*960  # 7 dias (2 turnos)
 
@@ -46,7 +47,7 @@ simular <- function(Punching,
     add_resource("Welding",  Welding ) %>%
     add_resource("Pressing", Pressing) %>%
     add_resource("Drilling", Drilling) %>%
-    add_generator("flowShop", flowShop, function() rnorm(1, 5, 1))
+    add_generator("flowShop", flowShop, function() rexp(1, 1/5))
   # Run com replicacoes
   envs <- lapply(1:n_run, function(i) {
     reset(env) ; run(env, sim_t) # Simula tempo definido em sim_t
@@ -65,9 +66,9 @@ simular <- function(Punching,
 library(GA)
 library(parallel)
 
-popSize <- 10         # Tamanho da população
-maxiter <- 50         # Max de iteração
-run <- 5              # Numero de iterações iguais que para otimização
+popSize <- 100        # Tamanho da população
+maxiter <- 500        # Max de iteração
+run <- 30             # Numero de iterações iguais que para otimização
 pcrossover <- 0.8     # Crossover
 pmutation <- 0.1      # Mutação
 parallel <- TRUE      # Parelizando a avalição dos individuos
