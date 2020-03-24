@@ -1,7 +1,6 @@
 library(simmer)
 library(simmer.plot)
 
-set.seed(123)
 n_run <- 30   # Números de replicação para cada simulação
 sim_t <- 7*960  # 7 dias (2 turnos)
 
@@ -73,6 +72,7 @@ run <- 10             # Numero de iterações iguais que para otimização
 pcrossover <- 0.8     # Crossover
 pmutation <- 0.1      # Mutação
 parallel <- TRUE      # Parelizando a avalição dos individuos
+seed <- 123
 
 lower <- c(1,1,1,1,1) # Restrições de max
 upper <- c(5,5,5,5,5) # Restrições de min
@@ -87,7 +87,8 @@ GA <- ga(type = "real-valued",
          run = run,
          pcrossover = pcrossover,
          pmutation = pmutation,
-         parallel = parallel)
+         parallel = parallel,
+         seed = seed)
 
 # Melhor solucao
 solution <- round(GA@solution) %>% print
