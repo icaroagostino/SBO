@@ -75,8 +75,8 @@ pmutation <- 0.1      # Mutação
 parallel <- TRUE      # Parelizando a avalição dos individuos
 seed <- 999
 
-lower <- c(1,1,1,1,1) # Restrições de max
-upper <- c(5,5,5,5,5) # Restrições de min
+lower <- c(1,1,1,1,1) # Restrições de min
+upper <- c(5,5,5,5,5) # Restrições de max
 
 # Otimizacao em GA para encontrar a combinacao otima de recursos
 GA <- ga(type = "real-valued",
