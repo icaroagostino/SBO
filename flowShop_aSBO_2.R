@@ -10,7 +10,7 @@ simular <- function(Punching,
                     Welding,
                     Pressing,
                     Drilling){
-  set.seed(123)
+  set.seed(123) # Semente para garantir reprodução
   # Parametros a serem variados na simulacao
   Punching <- round(Punching, 0)
   Bending  <- round(Bending,  0)
@@ -73,7 +73,7 @@ run <- 10             # Numero de iterações iguais que para otimização
 pcrossover <- 0.8     # Crossover
 pmutation <- 0.1      # Mutação
 parallel <- TRUE      # Parelizando a avalição dos individuos
-seed <- 999
+seed <- 999           # Semente para garantir reprodução
 
 lower <- c(1,1,1,1,1) # Restrições de min
 upper <- c(5,5,5,5,5) # Restrições de max
