@@ -77,7 +77,7 @@ seed <- 999           # Semente para garantir reprodução
 
 lower <- c(1,1,1,1,1) # Restrições de min
 upper <- c(5,5,5,5,5) # Restrições de max
-
+inicio <- Sys.time()
 # Otimizacao em GA para encontrar a combinacao otima de recursos
 GA <- ga(type = "real-valued",
          fitness = function(x) simular(x[1],x[2],x[3],x[4],x[5]),
@@ -90,11 +90,12 @@ GA <- ga(type = "real-valued",
          pmutation = pmutation,
          parallel = parallel,
          seed = seed)
-
+fim <- Sys.time()
+fim-inicio
 # Melhor solucao
-solution <- round(GA@solution) %>% print
+solution <- round(GA@solution)[1,] %>% print
 plot(GA) # Plota busca
 
 # Simula melhor solucao
-do.call(simular, as.list(solution))
+do.call(simular, as.list(as.vector(solution)))
 plot(get_mon_resources(envs)) # Plota resultados
