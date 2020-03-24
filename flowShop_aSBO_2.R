@@ -1,8 +1,8 @@
 library(simmer)
 library(simmer.plot)
 
-n_run <- 30   # Números de replicação para cada simulação
-sim_t <- 7*960  # 7 dias (2 turnos)
+n_run <- 30     # Números de replicação para cada simulação
+sim_t <- 960*7  # 7 dias (2 turnos)
 
 # Criando uma funcao para simular um cenario
 simular <- function(Punching,
@@ -10,6 +10,7 @@ simular <- function(Punching,
                     Welding,
                     Pressing,
                     Drilling){
+  set.seed(123)
   # Parametros a serem variados na simulacao
   Punching <- round(Punching, 0)
   Bending  <- round(Bending,  0)
@@ -72,7 +73,7 @@ run <- 10             # Numero de iterações iguais que para otimização
 pcrossover <- 0.8     # Crossover
 pmutation <- 0.1      # Mutação
 parallel <- TRUE      # Parelizando a avalição dos individuos
-seed <- 123
+seed <- 999
 
 lower <- c(1,1,1,1,1) # Restrições de max
 upper <- c(5,5,5,5,5) # Restrições de min
