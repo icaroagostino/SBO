@@ -1,5 +1,5 @@
 library(simmer)
-library(simmer.plot)
+#library(simmer.plot)
 
 n_run <- 30     # Números de replicação para cada simulação
 sim_t <- 960*7  # 7 dias (2 turnos)
@@ -93,7 +93,7 @@ GA <- ga(type = "real-valued",
          parallel = parallel,
          seed = seed)
                   
-fim <- Sys.time()   # TEmpo de fim da simulação
+fim <- Sys.time()   # Tempo de fim da simulação
 fim-inicio          # Tempo total de simulação
                   
 # Melhor solucao
