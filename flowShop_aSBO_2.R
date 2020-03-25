@@ -98,4 +98,4 @@ plot(GA) # Plota busca
 
 # Simula melhor solucao
 do.call(simular, as.list(as.vector(solution)))
-plot(get_mon_resources(envs)) # Plota resultados
+#plot(get_mon_resources(envs)) # Plota resultados
