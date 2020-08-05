@@ -155,7 +155,7 @@ no fim retorna a utilização média dos recursos.
 ```
 
 Se você estiver utilizando a versão `dplyr` 1.0 ou maior rode o código a aseguir para
-desativar os avisos da função Summarise ao longo da otimização:
+desativar os avisos da função `summarise()` ao longo da otimização:
 
 ```r
 options(dplyr.summarise.inform = FALSE)
