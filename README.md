@@ -63,7 +63,6 @@ carregar as bibliotecas e criar o ambiente de simulação.
         seize("Drilling", 1) %>%
         timeout(function() rnorm(1, 6)) %>%
         release("Drilling", 1)
-      # Adcionando recursos
 ```
 Os tempos atribuídos aos processos são arbitrários, para adicionar
 estocasticidade vamos utilizar a distribuição normal. No ambiente de
@@ -72,6 +71,7 @@ construída foi adicionada ao ambiente de simulação. Agora vamos
 adicionar os recursos que serão o número de máquinas paralelas em cada
 etapa.
 ```r
+    # Adicionando recursos
     env %>%
         add_resource("Punching", 2) %>%
         add_resource("Bending",  2) %>%
@@ -153,6 +153,14 @@ no fim retorna a utilização média dos recursos.
       return(util[[2]] %>% mean)
     }
 ```
+
+Se você estiver utilizando a versão `dplyr` 1.0 ou maior rode o código a aseguir para
+desativar os avisos da função Summarise ao longo da otimização:
+
+```r
+options(dplyr.summarise.inform = FALSE)
+```
+
 Após o encapsulamento do cenário de simulação como uma função basta
 parametrizar o algoritimo genético e executar a otimização. Aqui vamos
 assumir os seguintes parâmetros arbitrários:
@@ -173,6 +181,7 @@ geração teremos 10 soluções possíveis, os melhores indivíduos de cada
 iteração sofrerão crossover e mutação gerando uma nova geração de
 soluções. Ao fim de 20 iteração a melhor solução será retornada
 maximizando a utilização dos recursos.
+
 ```r
     GA <- ga(type = "real-valued",
              fitness = function(x) simular(x[1],x[2],x[3],x[4],x[5]),
