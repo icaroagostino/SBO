@@ -1,6 +1,6 @@
 # **Otimização baseada em Simulação em R**
 
-Uma aplicação das implementações desse repositório foi publicada no congresso **ENEGEP 2020**
+As implementações desse repositório geraram uma publicação congresso **ENEGEP 2020**
 - **Artigo**: [SBO para balanceamento de Flow Shop híbrido: Implementação e aplicação em R](http://www.abepro.org.br/biblioteca/TN_STO_344_1765_40002.pdf)
 - **Apresentação**: [google slides](https://docs.google.com/presentation/d/e/2PACX-1vQj5gJ-TVwyKali481iEe6giBJJx7LBUtXlvx1p7GZ2tNa3RIAznz5sTZXPUIfUiH1tgsLaB_RDMumC/pub?start=false&loop=false&delayms=3000)
 
