@@ -1,4 +1,7 @@
 # **Otimização baseada em Simulação em R**
+
+Uma aplicação das implementações desse repositório foi publicado no congresso ENEGEP 2020 - [Link do artigo](http://www.abepro.org.br/biblioteca/TN_STO_344_1765_40002.pdf)
+
 Ícaro Agostino, 19/02/2020
 
 Neste reporte é demonstrado a implementação da abordagem **Otimização
