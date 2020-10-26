@@ -8,7 +8,7 @@ As implementações desse repositório geraram uma publicação no congresso **E
 Ícaro Agostino, 19/02/2020
 
 Neste reporte é demonstrado a implementação da abordagem **Otimização
-baseado em Simulação**, e realizado uma aplicação para balanceamento de
+baseada em Simulação**, e realizado uma aplicação para balanceamento de
 Flow Shop híbrido. Serão utilizados os pacotes `Simmer` e `GA`, ambos
 serão integrados de forma que cada conjunto de soluções gerados pela
 Otimização seja testado em um ambiente simulado que representa um
