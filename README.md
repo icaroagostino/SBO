@@ -5,7 +5,7 @@ As implementações desse repositório geraram uma publicação no congresso **E
 - **Slides da apresentação**: [google slides](https://docs.google.com/presentation/d/e/2PACX-1vQj5gJ-TVwyKali481iEe6giBJJx7LBUtXlvx1p7GZ2tNa3RIAznz5sTZXPUIfUiH1tgsLaB_RDMumC/pub?start=false&loop=false&delayms=3000)
 - **Vídeo da apresentação no evento**: https://youtu.be/kZyk-G7TWyA
 
-Ícaro Agostino, 19/02/2020
+Um tutorial mais detalhado pode ser encontrado nesse [**blog post**](https://icaroagostino.github.io/post/sbo/).
 
 Neste reporte é demonstrado a implementação da abordagem **Otimização
 baseada em Simulação**, e realizado uma aplicação para balanceamento de
@@ -112,15 +112,15 @@ paralelas em cada etapa não é adequada para a demanda atual, formando
 fila excessiva na etapa Bending e subutilizando as demais etapas. A
 utilização média dos recursos para esse cenário foi de **72.71%**.
 
-### Utilizando algoritimo genético com o pacote `GA`
+### Utilizando algoritmo genético com o pacote `GA`
 
 O pacote `GA` implementado em `R` fornece uma coleção de funções de
 propósito geral para otimização usando algoritmos genéticos. A
-otimização utilizando algoritimo genético pode ser executada
+otimização utilizando algoritmo genético pode ser executada
 sequencialmente ou em paralelo para maior performance.
 
 Para solucionar esse problema de balanceamento vamos utilizar Otimização
-baseada em Simulação, integrando algoritimo genético ao ambiente de
+baseada em Simulação, integrando algoritmo genético ao ambiente de
 simulação implementado. Vamos carregar o pacote `GA` e integrar a
 simulação.
 ```r
@@ -168,7 +168,7 @@ options(dplyr.summarise.inform = FALSE)
 ```
 
 Após o encapsulamento do cenário de simulação como uma função basta
-parametrizar o algoritimo genético e executar a otimização. Aqui vamos
+parametrizar o algoritmo genético e executar a otimização. Aqui vamos
 assumir os seguintes parâmetros arbitrários:
 
 -   Tamanho da população: 10
